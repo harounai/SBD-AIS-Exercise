@@ -17,6 +17,7 @@ import (
 	httpSwagger "github.com/swaggo/http-swagger"
 )
 
+
 // embeddedFrontend embeds the frontend into the binary
 //
 //go:embed frontend/*

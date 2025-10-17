@@ -20,7 +20,7 @@ func NewDatabaseHandler() *DatabaseHandler {
 	}
 	var orders []model.Order
 
-	// Init orders slice with some test data
+	// Init orders slice with some test data.
 
 	return &DatabaseHandler{
 		drinks: drinks,
