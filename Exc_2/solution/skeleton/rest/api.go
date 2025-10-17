@@ -38,7 +38,7 @@ func GetOrders(db *repository.DatabaseHandler) http.HandlerFunc {
 	}
 }
 
-// todo create GetOrdersTotal /api/order/total -DONE
+// todo create GetOrdersTotal /api/order/totalled -DONE
 
 func GetOrdersTotal(db *repository.DatabaseHandler) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {

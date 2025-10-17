@@ -12,9 +12,11 @@ type DatabaseHandler struct {
 // todo - DONE
 func NewDatabaseHandler() *DatabaseHandler {
 	drinks := []model.Drink{
-		{ID: 1, Name: "Beer", Price: 2.0, Description: "Hagenberger Gold"},
-		{ID: 2, Name: "Spritzer", Price: 1.4, Description: "Wine with Soda"},
-		{ID: 3, Name: "Coffee", Price: 0.0, Description: "Mifare isn't that secure ;)"},
+		{ID: 1, Name: "Espresso",     Price: 2.2, Description: "Strong Italian coffee shot"},
+		{ID: 2, Name: "Americano",    Price: 2.5, Description: "Espresso with hot water"},
+		{ID: 3, Name: "Cappuccino",   Price: 2.9, Description: "Espresso with foamed milk"},
+		{ID: 4, Name: "Latte",        Price: 3.1, Description: "Espresso with steamed milk"},
+		{ID: 5, Name: "Water Sparkling", Price: 1.0, Description: "Bubbly, refreshing H2O"},
 	}
 	var orders []model.Order
 
@@ -34,25 +36,12 @@ func (db *DatabaseHandler) GetOrders() []model.Order {
 	return db.orders
 }
 
-// todo - DONE
-// func (db *DatabaseHandler) GetTotalledOrders() map[uint64]uint64 {
-// 	for _, order := range db.orders {
-// 		totalledOrders := make(map[uint64]uint64)
-// 		totalledOrders[order.DrinkID] += 1
-// 	}
-// 	// key = DrinkID, value = Amount of orders
-// 	// totalledOrders map[uint64]uint64
-
-// 	return totalledOrders
-
 func (db *DatabaseHandler) GetTotalledOrders() map[uint64]uint64 {
 	totalledOrders := make(map[uint64]uint64)
 	for _, order := range db.orders {
 		totalledOrders[order.DrinkID] += 1
 	}
 	// key = DrinkID, value = Amount of orders
-	// totalledOrders map[uint64]uint64
-
 	return totalledOrders
 }
 
