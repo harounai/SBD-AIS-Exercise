@@ -1,0 +1,32 @@
+# todo
+
+version: "3.9"
+
+services:
+  db:
+    image: postgres:18
+    container_name: pgdb_sbd
+    environment:
+      POSTGRES_DB: order
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata_sbd:/var/lib/postgresql  # fixed from /data to /postgresql for v18+
+
+  ordersystem:
+    build: .
+    depends_on:
+      - db
+    environment:
+      POSTGRES_DB: order
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_TCP_PORT: 5432
+      DB_HOST: db   # matches the service name above
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata_sbd:
