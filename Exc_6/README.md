@@ -46,6 +46,6 @@ To view files in your local S3 / object storage in your IDE, install the
 [Remote File Systems](https://plugins.jetbrains.com/plugin/21706-remote-file-systems) plugin.
 Use the username and password supplied in `debug.env` or your `docker-compose.yml`.
 
-![s3_plugin_goland.png](solution/res/s3_plugin_goland.png)
-
+![s3_plugin_goland.png](/Users/bl3ks/Library/CloudStorage/OneDrive-FHOOe/WS26/SBD3/SBD-AIS-Exercise/Exc_6/solution/skeleton/res/s3_plugin_goland.png)
+  
 A [similar plugin](https://marketplace.visualstudio.com/items?itemName=seriousbenentertainment.minio) also exists for Visual Studio Code.
