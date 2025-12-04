@@ -1,13 +1,10 @@
 package client
 
 import (
-	"context"
 	"exc8/pb"
-	"fmt"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-	"google.golang.org/protobuf/types/known/emptypb"
 )
 
 type GrpcClient struct {

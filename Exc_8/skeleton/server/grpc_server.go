@@ -1,15 +1,10 @@
 package server
 
 import (
-	"context"
 	"exc8/pb"
-	"fmt"
-	"log/slog"
 	"net"
 
 	"google.golang.org/grpc"
-	emptypb "google.golang.org/protobuf/types/known/emptypb"
-	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 type GRPCService struct {
